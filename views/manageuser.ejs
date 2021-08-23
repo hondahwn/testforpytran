@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+    <link rel="stylesheet" type="text/css" href="/style/car.css">
+    <link rel="stylesheet" type="text/css" href="/style/sidebar.css">
+
+    <script src="/scripts/js/usermanage.js"></script>
+
+    <body>
+        <%- include('./partials/navbar.ejs') %>
+            <%- include('./partials/sidebar.ejs') %>
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                    </div>
+                                    <div class="col-md-4">
+
+                                    </div>
+                                    <div class="col-md-4">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <canvas class="chart" width="250" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <Tabls class="col-md-12 fw-bold fs-3">Use Manage
+                            <button class="btn btn-primary" id="adduser">+</button>
+                    </div>
+
+                    <div class="col-md-12">
+                        <!-- table -->
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Name</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>ID card</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            
+                        </table>
+                    </div>
+
+                </div>
+                </div>
+                <div class="col-2"></div>
+                </div>
+                </div>
+                </div>
+                </div>
+
+
+                <!-- Modal Add Edit User -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add user</h5>
+                                <button type="button" class="close closes" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Name:</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Lastname:</label>
+                                        <input type="text" class="form-control" id="editer">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Email:</label>
+                                        <input class="form-control" type="email" placeholder="example@mail.com"
+                                            id="email"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Tel number:</label>
+                                        <input class="form-control" type="tel" placeholder="08xxxxxxxx"
+                                            id="tel"></input>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">ID CARD:</label>
+                                        <input type="text" class="form-control" id="card">
+                                    </div>
+                                    <div>
+                                        <select id="selectrole" class="form-control">
+                                            <option value="3">Admin</option>
+                                            <option value="1">User</option>
+                                            <option value="2">Driver</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="closes btn btn-secondary"
+                                    data-dismiss="modal">CLOSE</button>
+                                <button type="button" class="btn btn-primary" id="btnModalSave">add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end -->
+
+                <!-- Modal  Delete User -->
+
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">DELETE USER</h5>
+                                <button type="button" class="close close2" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <p>Are you sure you want to remove this User</p>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary close2">NO</button>
+                                <button type="button" class="btn btn-danger" id="deletekiki">YES</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </body>
+
+</html>

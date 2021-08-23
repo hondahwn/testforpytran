@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/header.ejs') %>
+  <link rel="stylesheet" type="text/css" href="/style/index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <body>
+    <div id="floating-panel">
+      <input id="address" type="text" value="พะเยา">
+      <input id="submit" type="button" value="ค้นหาข้อมูล">
+      <input type="button" id="profile" value="profile">
+      <input type="button" id="Logout" value="Logout">
+    </div>
+
+    <div id="review"><a href="/review" class="review" style="position: absolute;">Review</a></div>
+    <div id="eiei"><a href="#" class="request" style="position: absolute;">Request</a></div>
+    <div class="popup_box">
+      <h1>คุณต้องการที่จะไป</h1>
+      <label>are you sure to proceed?</label>
+      <div class="btns">
+        <a href="#" class="btn1">เข้าเมือง</a>
+        <a href="#" class="btn2">หน้ามอ</a>
+      </div>
+    </div>
+
+    <div id="map"></div>
+    <%- include('./partials/map.ejs') %>
+
+      <script src="/scripts/js/index.js"></script>
+  </body>
+
+</html>
